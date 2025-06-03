@@ -4,7 +4,7 @@ from multi_function_device import MultiFunctionPrinter
 from workflows import PrintWorkflow, ScanWorkflow, FaxWorkflow, EmailWorkflow
 
 
-if __name__ == "__main__":
+def main():
     doc = Document("Sales Figures")
 
     # 1) A pure printer:
@@ -28,3 +28,7 @@ if __name__ == "__main__":
     # 4) Trying to use a scanner in a print workflow is now a type error at compile-time
     #    (or at least a design‐time mismatch), not a runtime stub.
     # scan_workflow_bad = ScanWorkflow(printer)  # <-- Linter/IDE can alert: printer is not Scannable.
+
+if __name__ == "__main__":
+    main()
+   
